@@ -3,7 +3,7 @@ Faça um programa que peça ao usuário para digitar um número inteiro,
 informe se este número é par ou ímpar. Caso o usuário não digite um número
 inteiro, informe que não é um número inteiro.
 """
-'''
+
 try:
     valor_digitado = input('Digite um número inteiro: ')
     valor_digitado_int = int(valor_digitado)
@@ -14,7 +14,7 @@ try:
         print('\'{}\' é ímpar'.format(valor_digitado_int))
 except:
     print('\'{}\'não é um valor inteiro'.format(valor_digitado))
-'''
+
 
 
 #CORREÇÃO DO PROFESSOR:
