@@ -7,4 +7,4 @@ for silaba_separada in palavra_secreta:
     silaba_separada = '*'
     palavra_completa += silaba_separada
 
-silaba_chutada = 
+silaba_chutada = ...
