@@ -21,6 +21,7 @@ while True:
         # SEGUNDO TESTE:
 
         if digito_1 <= 9:
+            print( 'Primeiro teste, passou!')
             dez_digitos = 0
             contador_regressivo_2 = []
             i_contador_2 = 0
@@ -37,11 +38,12 @@ while True:
                 resultado_2 += int(digito_2) * contador_regressivo_2[i_contador_2]
                 i_contador_2 += 1
 
-            digito_2 = (resultado * 10) % 11
-            digito_2 = digito_2 if digito_2 <= 9 else 'Cpf falso!'
+            digito_2 = (resultado_2 * 10) % 11
 
             if digito_2 <= 9:
                 print('Cpf Válido!')
+            else:
+                print('Este cpf é inválido')
 
 
         else:
