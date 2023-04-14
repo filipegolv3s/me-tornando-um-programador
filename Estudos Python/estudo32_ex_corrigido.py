@@ -1,53 +1,58 @@
-cpf = ''
+cpf = '69369731034'
 nove_digitos = 0
 contador_regressivo = []
 i_contador = 0
 
 resultado = 0
-while True:
-    cpf = input('Digite seu cpf (somente com números): ')
-    nove_digitos = cpf[:9]
-    if cpf.isdigit():
-        for contador in range(10, 0, -1):
-            contador_regressivo.append(contador)
-            
 
-        for digito in nove_digitos:
-            resultado += int(digito) * contador_regressivo[i_contador]
-            i_contador += 1
+#cpf = input('Digite seu cpf (somente com números): ')
+nove_digitos = cpf[:9]
+if cpf.isdigit():
+    for contador in range(10, 0, -1):
+        contador_regressivo.append(contador)
+        
 
-        digito_1 = (resultado * 10) % 11
+    for digito in nove_digitos:
+        resultado += int(digito) * contador_regressivo[i_contador]
+        i_contador += 1
 
-        # SEGUNDO TESTE:
+    digito_1 = (resultado * 10) % 11
 
-        if digito_1 <= 9:
-            print( 'Primeiro teste, passou!')
-            dez_digitos = 0
-            contador_regressivo_2 = []
-            i_contador_2 = 0
+    # SEGUNDO TESTE:
 
-            resultado_2 = 0
+    if digito_1 <= 9:
+        print( 'Primeiro teste, passou!')
+        dez_digitos = 0
+        contador_regressivo_2 = []
+        i_contador_2 = 0
 
-            dez_digitos = cpf[:10]
+        resultado_2 = 0
 
-            for contador_2 in range(11, 0, -1):
-                contador_regressivo_2.append(contador_2)
+        dez_digitos = cpf[:10]
 
-            
-            for digito_2 in dez_digitos:
-                resultado_2 += int(digito_2) * contador_regressivo_2[i_contador_2]
-                i_contador_2 += 1
+        for contador_2 in range(11, 0, -1):
+            contador_regressivo_2.append(contador_2)
+        
+        print(contador_regressivo_2)
 
-            digito_2 = (resultado_2 * 10) % 11
+        
+        for digito_2 in dez_digitos:
+            resultado_2 += int(digito_2) * contador_regressivo_2[i_contador_2]
+            print(f'A soma de {int(digito_2)} x {contador_regressivo_2[i_contador_2]} é {resultado_2}')
+            i_contador_2 += 1
 
-            if digito_2 <= 9:
-                print('Cpf Válido!')
-            else:
-                print('Este cpf é inválido')
+        digito_2 = (resultado_2 * 10) % 11
 
 
+        if digito_2 > 9:
+            digito_2 = 0
+            print('Cpf inválido')
         else:
-            print('Cpf falso!')
+            'Digito Válido!'
+
 
     else:
-        print('Digite apenas números!: ')
+        print('Cpf falso!')
+
+else:
+    print('Digite apenas números!: ')
